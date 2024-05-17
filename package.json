@@ -19,7 +19,10 @@
     "@prismicio/next": "^1.5.0",
     "@prismicio/react": "^2.7.4",
     "clsx": "^2.0.0",
+    "highlight.js": "^11.9.0",
+    "marked": "^12.0.2",
     "next": "^14.0.1",
+    "prismic-reactjs": "^1.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1"

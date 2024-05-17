@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type ArticleDocumentDataSlicesSlice =
+  | CodeSlice
   | ImageSlice
   | QuoteSlice
   | TextSlice
@@ -333,6 +334,76 @@ export type AllDocumentTypes =
   | SettingsDocument;
 
 /**
+ * Primary content in *Code → Primary*
+ */
+export interface CodeSliceDefaultPrimary {
+  /**
+   * code field in *Code → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: code.primary.code
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  code: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Code Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CodeSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CodeSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *Code → Primary*
+ */
+export interface CodeSliceTypescriptPrimary {
+  /**
+   * code field in *Code → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: code.primary.code
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  code: prismic.RichTextField;
+}
+
+/**
+ * typescript variation for Code Slice
+ *
+ * - **API ID**: `typescript`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CodeSliceTypescript = prismic.SharedSliceVariation<
+  "typescript",
+  Simplify<CodeSliceTypescriptPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Code*
+ */
+type CodeSliceVariation = CodeSliceDefault | CodeSliceTypescript;
+
+/**
+ * Code Shared Slice
+ *
+ * - **API ID**: `code`
+ * - **Description**: Code
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CodeSlice = prismic.SharedSlice<"code", CodeSliceVariation>;
+
+/**
  * Default variation for ContactForm Slice
  *
  * - **API ID**: `default`
@@ -568,6 +639,12 @@ declare module "@prismicio/client" {
       SettingsDocument,
       SettingsDocumentData,
       AllDocumentTypes,
+      CodeSlice,
+      CodeSliceDefaultPrimary,
+      CodeSliceTypescriptPrimary,
+      CodeSliceVariation,
+      CodeSliceDefault,
+      CodeSliceTypescript,
       ContactFormSlice,
       ContactFormSliceVariation,
       ContactFormSliceDefault,

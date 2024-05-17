@@ -1,0 +1,48 @@
+{
+  "id": "code",
+  "type": "SharedSlice",
+  "name": "Code",
+  "description": "Code",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "code": {
+          "type": "StructuredText",
+          "config": {
+            "label": "code",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "preformatted"
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "typescript",
+      "name": "typescript",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "code": {
+          "type": "StructuredText",
+          "config": {
+            "label": "code",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "preformatted"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

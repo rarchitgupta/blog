@@ -1,0 +1,45 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"code": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "preformatted",
+						"content": {
+							"text": "def sum(a: int, b:int):\n    sum = a + b\n    return sum",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "typescript",
+		"primary": {
+			"code": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Adipisicing Lorem commodo sunt deserunt dolor qui laborum id. Exercitation cillum quis sint in adipisicing magna deserunt minim aute minim incididunt."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]
